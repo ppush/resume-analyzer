@@ -337,7 +337,6 @@ docker-compose up --build
 - **[DOCKER.md](DOCKER.md)** - Docker setup and configuration
 - **[TESTING_GUIDE.md](TESTING_GUIDE.md)** - Testing documentation
 - **[CONFIG.md](CONFIG.md)** - Configuration reference
-- **[CHANGELOG.md](CHANGELOG.md)** - Version history
 
 ## 🤝 Contributing
 
