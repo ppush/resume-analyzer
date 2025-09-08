@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  resume-analyzer:
+    build: .
+    container_name: resume-analyzer
+    ports:
+      # Forward web service port
+      - "8000:8000"
+    volumes:
+      # Mount test files folder
+      - ./tests/resources:/app/tests/resources
+      # Mount results folder
+      - ./results:/app/results
+      # Mount logs
+      - ./logs:/app/logs
+    environment:
+      # LM Studio settings (can be overridden)
+      - LM_STUDIO_URL=http://host.docker.internal:1234/v1/chat/completions
+      - DEFAULT_MODEL=google/gemma-3-12b
+      - DEFAULT_MAX_TOKENS=4096
+      - LLM_TIMEOUT=120
+      - LOG_LEVEL=INFO
+    networks:
+      - resume-network
+    restart: unless-stopped
+
+  # LM Studio service (optional, if you want to run in Docker)
+  lm-studio:
+    image: lmstudioai/lm-studio:latest
+    container_name: lm-studio
+    ports:
+      - "1234:1234"
+    volumes:
+      # Mount models folder
+      - lm-studio-models:/root/.cache/lm-studio
+    environment:
+      - LM_STUDIO_PORT=1234
+    networks:
+      - resume-network
+    restart: unless-stopped
+    # Uncomment if you want to run LM Studio in Docker
+    # profiles:
+    #   - lm-studio
+
+networks:
+  resume-network:
+    driver: bridge
+
+volumes:
+  lm-studio-models:
+    driver: local
