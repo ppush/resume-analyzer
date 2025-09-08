@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Code Style](https://img.shields.io/badge/Code%20Style-Black-black.svg)](https://black.readthedocs.io)
 
-> **AI-powered resume analysis service** using local LLM (LM Studio) with intelligent block processing, skills extraction, and experience calculation.
+> **AI-powered resume analysis service** built entirely with Cursor AI assistant, using local LLM (LM Studio) with intelligent block processing, skills extraction, and experience calculation.
 
 ## ✨ Features
 
@@ -31,7 +31,7 @@
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/resume-analyzer.git
+git clone https://github.com/ppush/resume-analyzer.git
 cd resume-analyzer
 ```
 
@@ -87,7 +87,7 @@ docker-compose -f docker-compose.dev.yml up --build
 
 ### POST `/analyze`
 
-Upload and analyze a resume file using HTML chunking for better structure preservation (DOCX/PDF).
+Upload and analyze a resume file with intelligent structure preservation (DOCX/PDF).
 
 **Request:**
 ```bash
@@ -350,7 +350,7 @@ docker-compose up --build
 
 ```bash
 # Clone your fork
-git clone https://github.com/yourusername/resume-analyzer.git
+git clone https://github.com/ppush/resume-analyzer.git
 
 # Install development dependencies
 pip install -r requirements-dev.txt
@@ -369,15 +369,16 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
+- [Cursor AI](https://cursor.sh/) for the AI-powered development assistant
 - [LM Studio](https://lmstudio.ai/) for local LLM hosting
 - [FastAPI](https://fastapi.tiangolo.com/) for the web framework
 - [Google Gemma](https://ai.google.dev/gemma) and [Meta Llama](https://llama.meta.com/) for the language models
 
 ## 📞 Support
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/resume-analyzer/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/resume-analyzer/discussions)
-- **Documentation**: [Wiki](https://github.com/yourusername/resume-analyzer/wiki)
+- **Issues**: [GitHub Issues](https://github.com/ppush/resume-analyzer/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/ppush/resume-analyzer/discussions)
+- **Documentation**: [Wiki](https://github.com/ppush/resume-analyzer/wiki)
 
 ---
 
@@ -385,6 +386,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Made with ❤️ for the developer community**
 
-[⭐ Star this repo](https://github.com/yourusername/resume-analyzer) | [🐛 Report Bug](https://github.com/yourusername/resume-analyzer/issues) | [💡 Request Feature](https://github.com/yourusername/resume-analyzer/issues)
+[⭐ Star this repo](https://github.com/ppush/resume-analyzer) | [🐛 Report Bug](https://github.com/ppush/resume-analyzer/issues) | [💡 Request Feature](https://github.com/ppush/resume-analyzer/issues)
 
 </div>
