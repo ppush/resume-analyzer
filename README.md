@@ -164,16 +164,16 @@ resume-analyzer/
 
 ```mermaid
 graph TD
-    A[Resume File] --> B[File Loader]
-    B --> C[Resume Parser]
-    C --> D[Block Processor]
-    D --> E[Result Aggregator]
-    E --> F[Final JSON]
+    A[Resume File<br/>PDF/DOCX] --> B[File Loader<br/>PyMuPDF/Mammoth]
+    B --> C[HTML Chunker<br/>Split into chunks]
+    C --> D[Resume Parser<br/>LLM Block Segmentation]
+    D --> E[Block Processor<br/>Parallel LLM Processing]
+    E --> F[Result Aggregator<br/>Skills Merging & Experience Calc]
+    F --> G[Final JSON<br/>Structured Data]
     
-    C --> G[LLM Block Segmentation]
-    D --> H[Parallel LLM Processing]
-    E --> I[Skills Merging]
-    E --> J[Experience Calculation]
+    D --> H[5 Block Types:<br/>projects, skills, education,<br/>languages, summary]
+    E --> I[Concurrent Processing<br/>AsyncIO + Semaphore]
+    F --> J[Skills Deduplication<br/>Experience Calculation<br/>Job Recommendations]
 ```
 
 ### Block Types
